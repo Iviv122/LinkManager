@@ -1,0 +1,45 @@
+services:
+  frontend:
+    build: ./app/frontend
+    container_name: LinkManagerFrontEnd
+    ports:
+      - "8000:5741"
+  database:
+    image: mongo
+    container_name: LinkManager
+    hostname: mongodb
+    env_file:
+      - .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+      - mongo-log:/var/log/mongodb
+      - .mongoinit.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - mongodb_network
+
+  backend:
+    build: ./app/backend
+    container_name: LinkManagerBackEnd
+    hostname: backend 
+    ports:
+      - "3000:3000"
+    networks:
+      - mongodb_network
+
+volumes:
+  mongo-data:
+    driver: local
+    name: mongo-data
+  mongo-log:
+   driver: local
+   name: mongo-log
+
+networks:
+  mongodb_network:
+    driver: bridge
+    name: mongo-networks
