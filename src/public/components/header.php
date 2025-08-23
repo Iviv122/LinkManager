@@ -12,6 +12,7 @@
         <header>
             <a href="index.php">Home</a>    
             <a href="tags.php">Tags</a>
+            <a href="settings.php">Settings</a>
             <hr>
         </header>
 
