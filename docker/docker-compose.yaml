@@ -5,11 +5,11 @@ services:
       dockerfile: Dockerfile
     container_name: linkmanager
     restart: always
-    working_dir: /var/www
+    working_dir: /var/www/
     volumes:
       - ../src:/var/www
   nginx:
-    image: nginx-alpine
+    image: nginx
     container_name: linkmanager-nginx
     restart: always
     ports:
