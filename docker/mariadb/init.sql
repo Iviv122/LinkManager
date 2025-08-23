@@ -47,6 +47,9 @@ INSERT INTO linktag (LinkID,TagID)
 VALUES (1,1);
 
 INSERT INTO linktag (LinkID,TagID)
+VALUES (2,1);
+
+INSERT INTO linktag (LinkID,TagID)
 VALUES (1,2);
 
 /*
