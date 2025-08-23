@@ -17,3 +17,13 @@ services:
     volumes:
       - ../src:/var/www
       - ./nginx:/etc/nginx/conf.d
+  db:
+    image: mariadb
+    container_name: linkmanager-db
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+    volumes:
+     - ./mariadb:/docker-entrypoint-initdb.d
