@@ -11,7 +11,7 @@
     <body>
         <header>
             <a href="index.php">Home</a>    
-            <a href="tags.php">Tags</a>
+            <a href="folders.php">Tags</a>
             <a href="settings.php">Settings</a>
             <hr>
         </header>

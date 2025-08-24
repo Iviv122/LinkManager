@@ -21,27 +21,10 @@ $pageConfig = ['title' => 'Home'];
 
 <?php
 
-include_once("../models/Link.php");
-include_once("../controllers/LinksBuilder.php");
-
-$servername = "db";
-$username = "root";
-$password = "example";
-$dbname = "LinkManager";
-$port = 3306;
-
-$conn = mysqli_connect($servername, $username, $password, $dbname, $port);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 echo "<input id='search' placeholder='search by name'></input>";
 
 
-$LinksBuilder = new LinksBuilder($conn);
-
-$links = $LinksBuilder->getLinks();
 
 foreach ($links as $link) {
     echo "<div>";

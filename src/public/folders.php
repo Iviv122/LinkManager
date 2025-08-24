@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) > 0) {
         $id = $row["TagID"];
         $name = $row["name"];
 
-        echo "<div><h1><a href='tag.php?id=$id'>$name</a></h1></div>";
+        echo "<div><h1><a href='folder.php?id=$id'>$name</a></h1></div>";
 
     }
 }
