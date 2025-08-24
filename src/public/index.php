@@ -21,23 +21,8 @@ $pageConfig = ['title' => 'Home'];
 
 <?php
 
-
 echo "<input id='search' placeholder='search by name'></input>";
-/*
-foreach ($links as $link) {
-    echo "<div>";
-    echo "<h1>" . $link->name . " </h1><a href='https://$link->url'>" . $link->url . "</a>";
 
-    if ($link->tags) {
-
-        foreach ($link->tags as $tag) {
-            echo "<p>" . $tag . "</p>";
-        }
-
-    }
-    echo "</div>";
-}
-*/
 ?>
 <script src="./scripts/search.js"></script>
 <script src="./scripts/tagslist.js"></script>
