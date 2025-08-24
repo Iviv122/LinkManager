@@ -22,7 +22,9 @@ function search() {
 
     for (var i = 0; i < titles.length; i++) {
 
-        if (titles[i].innerHTML.includes(key)) {
+        let title = titles[i].innerHTML;
+        title = title.toLowerCase();
+        if (title.includes(key)) {
             blocks[i].hidden = false;
         } else {
             blocks[i].hidden = true;

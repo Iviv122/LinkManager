@@ -17,8 +17,8 @@ VALUES (null,"firefox","firefox.com");
 
 CREATE TABLE tag(
     TagID int NOT NULL AUTO_INCREMENT,
-    name varchar(255),
-    PRIMARY KEY (TagID,name) 
+    name varchar(255) UNIQUE,
+    PRIMARY KEY (TagID) 
 );
 
 INSERT INTO tag (name)
