@@ -23,9 +23,7 @@ $pageConfig = ['title' => 'Home'];
 
 
 echo "<input id='search' placeholder='search by name'></input>";
-
-
-
+/*
 foreach ($links as $link) {
     echo "<div>";
     echo "<h1>" . $link->name . " </h1><a href='https://$link->url'>" . $link->url . "</a>";
@@ -39,9 +37,9 @@ foreach ($links as $link) {
     }
     echo "</div>";
 }
-
-$conn->close();
+*/
 ?>
 <script src="./scripts/search.js"></script>
 <script src="./scripts/tagslist.js"></script>
+<script src="./scripts/getLinks.js"></script>
 <?php require_once './components/footer.php'; ?>
