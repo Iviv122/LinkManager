@@ -16,7 +16,16 @@ cp .env.example .env
 docker-compose up -d
 ```
 
+## First Run
+```
+php artisan migrate
+php artisan serve --host=0.0.0.0 --port=8000
+```
+
 ## Run 
 ```
 php artisan serve --host=0.0.0.0 --port=8000
 ```
+
+## Registration
+enter localhost:8025 to get verification mails
